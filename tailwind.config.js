@@ -5,13 +5,11 @@ module.exports = {
     purge: {
         content: ["public/**/*.html"],
     },
-    darkMode: false,
+    darkMode: true,
     theme: {
         fontFamily: {
             body: ['Open Sans', "sans-serif"]
         },
-
-  
     },
     variants: {
 

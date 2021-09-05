@@ -14,12 +14,12 @@ html {
     width: 100%;
     min-width: 1000px;
     overflow: auto;
-    display: block;
+
 }
 .myName::before{
     content: 'Abderrahmen Brinis';
     animation-name: switch;
-    animation-duration: 4s;
+    animation-duration: 8s;
     animation-timing-function: ease-out;
     overflow: hidden;
 
