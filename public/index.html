@@ -9,20 +9,20 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
 </head>
-<body class="antialiased" >
+<body class="subpixel-antialiased " data-theme="corporate" x-data="{isNavOpen:false,scroll:true}">
     <div class="relative min-h-screen bg-right-top bg-no-repeat bg-cover " ><!-- Start Hero Block -->
-        <div style="z-index: 1;" class="absolute w-full h-screen opacity-50 animate-pulse bg-gradient-to-br via-indigo-600 from-red-400">
+        <div style="z-index: 1;" class="absolute w-full h-screen opacity-30 bg-gradient-to-b via-indigo-600 from-red-300 ">
         </div>
         <video id="myVideo" class="absolute object-cover w-full h-screen " src="assets/img/CodingBackground.mp4" muted loop autoplay>
         
         </video> 
             <div id="main" class="mx-auto opacity-100 sm:pb-16 lg:pb-24 xl:pb-32">
-                <nav x-data="{isOpen:true}" class="bg-transparent dark:bg-gray-800">
+                <nav  class="bg-transparent dark:bg-gray-800">
                     <div class="container px-6 py-4 mx-auto">
                         <div class="md:flex md:items-center md:justify-between">
                             <div class="flex items-center justify-between">
                                 <!-- Mobile menu button -->
-                                <div x-on:click="isOpen = !isOpen" class="flex flex-row-reverse md:hidden">
+                                <div x-on:click="isNavOpen = !isNavOpen" class="flex flex-row-reverse md:hidden">
                                     <button type="button" class="text-gray-100 dark:text-gray-200 hover:text-gray-50 dark:hover:text-gray-400 focus:outline-none focus:text-gray-50 dark:focus:text-gray-400" aria-label="toggle menu">
                                         <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
                                             <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                             <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-                            <div :class="isOpen?'block':'hidden'" class="flex-1 transition-all md:flex md:items-center md:justify-between">
+                            <div :class="isNavOpen?'block':'hidden'" class="flex-1 transition-all md:flex md:items-center md:justify-between">
                                 <div class="grid -mx-4 md:flex md:flex-row md:items-center md:mx-8">
                                     <a href="#" class="px-2 py-1 mx-2 mt-2 font-bold transition-all duration-200 transform border-b rounded-md rounded-b-none hover:border-none hover:rounded-b-md hover:translate-y-1 hover:text-indigo-100 hover:shadow-md text-gray-50 hover:ring-2 ring-white text-md md:mt-0 dark:text-gray-200 dark:hover:bg-gray-700">Join Slack</a>
                                     <a href="#" class="px-2 py-1 mx-2 mt-2 font-bold transition-all duration-200 transform border-b rounded-md rounded-b-none hover:border-none hover:rounded-b-md hover:translate-y-1 hover:text-indigo-100 hover:shadow-md text-gray-50 hover:ring-2 ring-white text-md md:mt-0 dark:text-gray-200 dark:hover:bg-gray-700">Browse Topics</a>
@@ -72,14 +72,31 @@
                             </div>
                         </div>
                     </div>
-                    <div class="absolute bottom-0 flex items-center justify-center min-w-full mx-auto text-white ">
-                        <a  class=" animate-bounce" href="#">
-                            <svg class="p-10 w-36 h-36"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="7 13 12 18 17 13" />  <polyline points="7 6 12 11 17 6" /></svg>
-                        </a>
-                    </div>
+   
 
                 </nav>
 
+                <div class="min-h-screen hero bg-base-200">
+                    <div class="text-center text-white pb-72 hero-content">
+                        
+                      <div class="max-w-md">
+                        <div class="max-w-lg transition-all mask mask-hexagon hover:mask-hexagon-2">
+                            <img class="object-cover object-center w-full h-64 rounded-md shadow" src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="">
+                        </div>
+                        <h1 class="mb-5 font-mono text-5xl font-bold">
+                              Hello there I am 
+                              <p class="mt-4 text-xl text-gray-50 dark:text-gray-400 lg:max-w-md">
+                             <span class="text-2xl font-semibold text-blue-500 dark:text-indigo-400 myName"></span> <br>ugit corrupti dolorem sequi ex veniam consequuntur id, maiores beatae ipsa omnis aliquam?
+                            </p>
+                            </h1> 
+ 
+                        <button class="text-white hover:bg-gray-600 hover:bg-opacity-40 hover:border-white btn btn-outline">My Projects</button>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  
                 <section class="mx-auto bg-transparent dark:bg-gray-800 md:pt-36">
                     <div class="container px-6 py-8 mx-auto">
                         <div class="flex flex-col items-center content-between lg:flex-row">
@@ -92,16 +109,17 @@
                             </div>
                             <div class="mt-8 lg:mt-0 lg:w-1/2">
                                 <div class="flex items-center justify-center lg:justify-end">
-                                    <div class="max-w-lg transition-all mask mask-hexagon hover:mask-hexagon-2">
-         
-                                        <img class="object-cover object-center w-full h-64 rounded-md shadow" src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="">
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
+                <div @scroll.window="scroll=(window.pageYOffset < 30)" :class="(scroll&&!isNavOpen)?'block':'hidden'"  class="fixed bottom-0 flex items-center justify-center min-w-full mx-auto text-white ">
+                    <a  class=" animate-bounce" href="#">
+                        <svg class="p-10 w-36 h-36"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="7 13 12 18 17 13" />  <polyline points="7 6 12 11 17 6" /></svg>
+                    </a>
+                </div>
                 </div>
         
     </div>
