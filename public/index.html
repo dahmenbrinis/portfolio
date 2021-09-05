@@ -9,7 +9,7 @@
 
 </head>
 <body class="antialiased" >
-    <div class="min-h-screen bg-right-top bg-no-repeat bg-cover " style="background-image: url(/assets/img/bg-hero.jpg);"><!-- Start Hero Block -->
+    <div class="relative min-h-screen bg-right-top bg-no-repeat bg-cover " style="background-image: url(/assets/img/bg-hero.jpg);"><!-- Start Hero Block -->
         <div style="z-index: inherit;" class="absolute w-full h-screen opacity-50 bg-gradient-to-br via-indigo-600 from-red-400">
         </div>
             <div id="main" class="mx-auto opacity-100 sm:pb-16 lg:pb-24 xl:pb-32">
@@ -26,7 +26,6 @@
                                     </button>
                                 </div>
                             </div>
-        
                             <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
                             <div x-show="isOpen" class="flex-1 transition-all md:flex md:items-center md:justify-between">
                                 <div class="grid -mx-4 md:flex md:flex-row md:items-center md:mx-8">
@@ -91,8 +90,8 @@
                         </div>
                     </div>
                 </section>
-                <a href="#">
-                    
+                <a class="absolute bottom-0 flex justify-center min-w-full mx-auto text-white animate-bounce" href="#">
+                    <svg class="w-48 h-48 p-10"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="7 13 12 18 17 13" />  <polyline points="7 6 12 11 17 6" /></svg>
                 </a>
                 </div>
         

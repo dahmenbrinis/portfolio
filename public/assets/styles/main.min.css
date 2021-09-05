@@ -686,6 +686,10 @@ html {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
 .inset-0 {
   top: 0px;
   right: 0px;
@@ -699,6 +703,10 @@ html {
 
 .right-0 {
   right: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .z-50 {
@@ -798,6 +806,14 @@ html {
   height: 5rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
 .max-h-screen {
   max-height: 100vh;
 }
@@ -838,6 +854,14 @@ html {
   width: 75%;
 }
 
+.w-48 {
+  width: 12rem;
+}
+
+.min-w-full {
+  min-width: 100%;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
@@ -859,6 +883,43 @@ html {
 .transform {
   -webkit-transform: var(--tw-transform);
           transform: var(--tw-transform);
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 
 .flex-row-reverse {
@@ -992,6 +1053,10 @@ html {
 .object-center {
   -o-object-position: center;
      object-position: center;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .px-6 {
@@ -1199,6 +1264,11 @@ html {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgba(59, 130, 246, var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgba(239, 68, 68, var(--tw-text-opacity));
 }
 
 .antialiased {
