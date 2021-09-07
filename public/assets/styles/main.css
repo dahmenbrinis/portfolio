@@ -4,6 +4,7 @@
 
 html {
     @apply antialiased font-body;
+    overflow-x: hidden;
 }
 
 @tailwind utilities;
@@ -13,6 +14,7 @@ html {
     min-width: 1000px;
     overflow: auto;
 }
+
 
 
 .translate-y-2full {
@@ -30,11 +32,11 @@ html {
     content: 'Abderrahmen Brinis';
     animation-name: switch;
     animation-duration: 8s;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
     overflow: hidden;
-
     animation-iteration-count: infinite;
 }
+
 
 
 @keyframes switch {

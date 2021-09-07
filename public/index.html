@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="assets/styles/main.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body class="subpixel-antialiased " data-theme="corporate" x-data="{isNavOpen:false,scroll:true,moveAvatar:true}">
     <!-- navigation menu -->
-    <nav  class="fixed z-20 w-full bg-transparent dark:bg-gray-800">
-        <div class="container px-6 py-4 mx-auto">
+    <nav  :class="(!scroll)?'bg-gray-50 text-blue-500':'bg-transparent text-gray-100'" class="fixed z-20 w-full transition-all ">
+        <div class="container px-6 py-4 mx-auto transform-gpu">
             <div class="md:flex md:items-center md:justify-between">
                 <div class="flex items-center justify-between">
                     <!-- Mobile menu button -->
-                    <div x-on:click="isNavOpen = !isNavOpen" class="flex flex-row-reverse md:hidden">
-                        <button type="button" class="text-gray-100 dark:text-gray-200 hover:text-gray-50 dark:hover:text-gray-400 focus:outline-none focus:text-gray-50 dark:focus:text-gray-400" aria-label="toggle menu">
+                    <div x-on:click="isNavOpen = !isNavOpen" :class="!scroll?'hidden':'block'" class="flex flex-row-reverse md:hidden">
+                        <button type="button" class=" dark:text-gray-200 focus:outline-none" aria-label="toggle menu">
                             <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
                                 <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
                             </svg>
@@ -25,16 +27,16 @@
                     </div>
                 </div>
                 <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-                <div :class="isNavOpen?'block ':'hidden'" class="flex-1 transition-all md:flex md:items-center md:justify-between">
+                <div :class="(isNavOpen&&scroll)?'block ':'hidden'" class="flex-1 transition-all md:flex md:items-center md:justify-between">
                     <div class="grid -mx-4 md:flex md:flex-row md:items-center md:mx-8">
-                        <a href="#" class="px-2 py-1 mx-2 mt-2 font-bold transition-all duration-200 transform border-b rounded-md rounded-b-none hover:border-none hover:rounded-b-md hover:translate-y-1 hover:shadow-md text-gray-50 hover:ring-2 ring-indigo-300 hover:text-indigo-300 text-md md:mt-0 dark:text-gray-200 dark:hover:bg-gray-700">Join Slack</a>
-                        <a href="#" class="px-2 py-1 mx-2 mt-2 font-bold transition-all duration-200 transform border-b rounded-md rounded-b-none hover:border-none hover:rounded-b-md hover:translate-y-1 hover:shadow-md text-gray-50 hover:ring-2 ring-indigo-300 hover:text-indigo-300 text-md md:mt-0 dark:text-gray-200 dark:hover:bg-gray-700">My Work</a>
-                        <a href="#" class="px-2 py-1 mx-2 mt-2 font-bold transition-all duration-200 transform border-b rounded-md rounded-b-none hover:border-none hover:rounded-b-md hover:translate-y-1 hover:shadow-md text-gray-50 hover:ring-2 ring-indigo-300 hover:text-indigo-300 text-md md:mt-0 dark:text-gray-200 dark:hover:bg-gray-700">About</a>
-                        <a href="#" class="px-2 py-1 mx-2 mt-2 font-bold transition-all duration-200 transform border-b rounded-md rounded-b-none hover:border-none hover:rounded-b-md hover:translate-y-1 hover:shadow-md text-gray-50 hover:ring-2 ring-indigo-300 hover:text-indigo-300 text-md md:mt-0 dark:text-gray-200 dark:hover:bg-gray-700">Contact</a>
+                        <a href="#Home" class="px-2 py-1 mx-2 mt-2 font-bold transition-all duration-200 transform border-b rounded-md rounded-b-none hover:border-none hover:rounded-b-md hover:translate-y-1 hover:shadow-md hover:ring-2 ring-gray-300 text-md md:mt-0 ">Home</a>
+                        <a href="#about" class="px-2 py-1 mx-2 mt-2 font-bold transition-all duration-200 transform border-b rounded-md rounded-b-none hover:border-none hover:rounded-b-md hover:translate-y-1 hover:shadow-md hover:ring-2 ring-gray-300 text-md md:mt-0 ">About</a>
+                        <a href="#projects" class="px-2 py-1 mx-2 mt-2 font-bold transition-all duration-200 transform border-b rounded-md rounded-b-none hover:border-none hover:rounded-b-md hover:translate-y-1 hover:shadow-md hover:ring-2 ring-gray-300 text-md md:mt-0 ">My Work</a>
+                        <a href="#contact" class="px-2 py-1 mx-2 mt-2 font-bold transition-all duration-200 transform border-b rounded-md rounded-b-none hover:border-none hover:rounded-b-md hover:translate-y-1 hover:shadow-md hover:ring-2 ring-gray-300 text-md md:mt-0 ">Contact</a>
                     </div>
 
-                    <div class="flex items-center mt-4 md:mt-0 " >
-                        <a href="#" class="mx-2 transition-all text-gray-50 dark:text-gray-300 hover:text-indigo-400 hover:scale-125 dark:hover:text-gray-300" aria-label="Reddit">
+                    <div  class="flex items-center mt-4 md:mt-0 " >
+                        <a href="#" class="mx-2 transition-all hover:text-indigo-400 hover:scale-125 " aria-label="Reddit">
                             <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -43,7 +45,7 @@
                             </svg>
                         </a>
                         
-                        <a href="#" class="mx-2 transition-all text-gray-50 dark:text-gray-300 hover:text-indigo-400 hover:scale-125 dark:hover:text-gray-300"
+                        <a href="#" class="mx-2 transition-all hover:text-indigo-400 hover:scale-125"
                             aria-label="Facebook">
                             <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +55,7 @@
                             </svg>
                         </a>
                         
-                        <a href="#" class="mx-2 transition-all text-gray-50 dark:text-gray-300 hover:text-indigo-400 hover:scale-125 dark:hover:text-gray-300" aria-label="Github">
+                        <a href="#" class="mx-2 transition-all hover:text-indigo-400 hover:scale-125" aria-label="Github">
                             <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -70,43 +72,180 @@
 
     </nav>
     <!-- welcome section  -->
-    <div class="relative min-h-screen overflow-hidden bg-right-top bg-no-repeat bg-cover " ><!-- Start Hero Block -->
-        <video  id="myVideo" class="absolute object-cover w-full h-full " src="assets/img/CodingBackground.mp4" muted loop autoplay>
+    <section id="Home" class="relative min-h-screen bg-right-top bg-no-repeat bg-cover mb-72 " ><!-- Start Hero Block -->
+        <video  style="height: 80%;" id="myVideo" class="absolute object-cover w-full " src="assets/img/CodingBackground.mp4" muted loop autoplay>
         </video> 
-        <div  class="absolute w-full h-screen opacity-30 bg-gradient-to-b from-indigo-600 via-red-400 ">
+        <div class="absolute w-full h-screen opacity-30 bg-gradient-to-b from-indigo-600 via-red-400">
         </div>
         <div id="main"  class="mx-auto opacity-100 ">
             <div  class="pt-56 hero bg-base-200">
                 <div :class="isNavOpen?'pt-80':'pt-48'" class= "text-center text-white transition-all hero-content">
                     <div class="max-w-md">
-                    <h1 class="mb-5 font-mono text-5xl font-bold">
-                            Hello there I am 
+                    <h1 class="py-3 mb-5 font-mono text-5xl font-bold transition-all rounded-md drop-shadow-2xl hover:ring-2 ring-white ring-1">
+                            Hi. I am 
                             <p class="mt-4 text-xl text-gray-50 dark:text-gray-400 lg:max-w-md">
                             <span class="text-2xl font-semibold text-blue-500 dark:text-indigo-400 myName"></span> <br>ugit corrupti dolorem sequi ex veniam consequuntur id, maiores beatae ipsa omnis aliquam?
                         </p>
                         </h1> 
-                    <button @click="moveAvatar = !moveAvatar" class="text-white hover:bg-gray-600 hover:bg-opacity-40 hover:border-white btn btn-outline">My Projects</button>
+                    <a href="#projects"  class="text-white hover:bg-gray-600 hover:bg-opacity-40 hover:border-white btn btn-outline">My Projects</a>
                     </div>
                 </div>
             </div>
         </div>
         <!-- scroll to bottom tooltip -->
-        <div @scroll.window="scroll=(window.pageYOffset <= 50)" :class="(scroll&&!isNavOpen)?'block':'hidden'"  
-            class="fixed bottom-0 flex items-center justify-center min-w-full mx-auto mt-8 text-white motion-reduce ">
+        <div @scroll.window="scroll=(window.pageYOffset <= 60)" :class="(scroll&&!isNavOpen)?'block':'hidden'"  
+            class="fixed bottom-0 flex items-center justify-center min-w-full mx-auto mt-12 text-white motion-reduce ">
             <a  class="transition-all rounded-full hover:ring-2 ring-white animate-bounce" href="#">
-                <svg class="w-24 h-24 p-3"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="7 13 12 18 17 13" />  <polyline points="7 6 12 11 17 6" /></svg>
+                <svg class="w-20 h-20 p-2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="7 13 12 18 17 13" />  <polyline points="7 6 12 11 17 6" /></svg>
             </a>
         </div>  
         <!-- section separator -->
-        <div class="relative bottom-0 w-full transform scale-x-105 bg-white rounded-lg h-96 -rotate-6 mt-96"></div>     
-        <div class="relative bottom-0 w-full transform scale-x-105 -translate-y-20 bg-white rounded-lg h-96 rotate-3 -mt-80"></div>     
-    </div>
-    <div @scroll.window="moveAvatar=(window.scrollY < 250)" style="margin-top: -570px;"
+        <div class="relative bottom-0 w-full transform scale-x-150 bg-gray-100 rounded-lg h-96 -rotate-6 mt-96"></div>     
+        <div  class="relative bottom-0 w-full transform scale-x-150 -translate-y-20 bg-gray-100 rounded-lg h-96 rotate-3 -mt-80"></div>     
+    </section>
+    <div  @scroll.window="moveAvatar=(window.scrollY < 250)" style="margin-top: -860px;"
             x-bind:class="{'translate-y-2full':(moveAvatar)}"  
         class="max-w-lg mx-auto mb-4 transition-all duration-500 ease-in-out translate-y-2full mask mask-hexagon hover:mask-hexagon-2">
-        <img class="object-cover object-center w-full h-64 rounded-md shadow" src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="">
+        <img class="object-cover object-center w-full h-64 rounded-md " src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="">
     </div>
-    <div class="z-20 -mt-20 bg-red-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi alias repellat voluptatibus sequi totam rerum ipsa at eius quidem obcaecati illo aspernatur dolorem, fuga tempora minima perspiciatis inventore possimus provident.</div>
+    <!-- what can ido for you section  -->
+    <section id="about" class="py-20 bg-gray-100 ">
+        <div class="flex flex-wrap"> 
+            <div class="w-full px-4 pt-6 text-center fade-up lg:pt-20 md:w-4/12"> 
+                <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-2xl"> 
+                    <div class="flex-auto px-4 py-5"> 
+                        <div class="inline-flex items-center justify-center w-12 h-12 p-3 mb-5 text-center text-white bg-red-400 rounded-full shadow-lg"> <i class="fas fa-award"></i> </div>
+                        <h6 class="text-xl font-semibold text-gray-900">Awarded Agency</h6> 
+                        <p class="mt-2 mb-4 text-gray-800"> Divide details about your product or agency work into parts. A paragraph describing a feature will be enough. </p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="w-full px-4 text-center fade-up md:w-4/12"> 
+                <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-2xl"> 
+                    <div class="flex-auto px-4 py-5"> 
+                        <div class="inline-flex items-center justify-center w-12 h-12 p-3 mb-5 text-center text-white bg-blue-400 rounded-full shadow-lg"> <i class="fas fa-retweet"></i> 
+                        </div> 
+                        <h6 class="text-xl font-semibold text-gray-900">Free Revisions</h6> 
+                        <p class="mt-2 mb-4 text-gray-800"> Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious. </p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="w-full px-4 pt-6 text-center fade-up lg:pt-20 md:w-4/12"> 
+                <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-2xl"> 
+                    <div class="flex-auto px-4 py-5"> 
+                        <div class="inline-flex items-center justify-center w-12 h-12 p-3 mb-5 text-center text-white bg-green-400 rounded-full shadow-lg"> <i class="fas fa-fingerprint"></i> 
+                        </div> 
+                        <h6 class="text-xl font-semibold text-gray-900">Verified Company</h6> 
+                        <p class="mt-2 mb-4 text-gray-800"> Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged! </p> 
+                    </div> 
+                </div> 
+            </div> 
+        </div>
+        <div class="flex flex-wrap"> 
+            <div class="w-full px-4 pt-6 text-center fade-up md:w-4/12"> 
+                <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-2xl"> 
+                    <div class="flex-auto px-4 py-5"> 
+                        <div class="inline-flex items-center justify-center w-12 h-12 p-3 mb-5 text-center text-white bg-red-400 rounded-full shadow-lg"> <i class="fas fa-award"></i> </div>
+                        <h6 class="text-xl font-semibold text-gray-900">Awarded Agency</h6> 
+                        <p class="mt-2 mb-4 text-gray-800"> Divide details about your product or agency work into parts. A paragraph describing a feature will be enough. </p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="w-full px-4 text-center fade-up lg:pt-20 md:w-4/12"> 
+                <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-2xl"> 
+                    <div class="flex-auto px-4 py-5"> 
+                        <div class="inline-flex items-center justify-center w-12 h-12 p-3 mb-5 text-center text-white bg-blue-400 rounded-full shadow-lg"> <i class="fas fa-retweet"></i> 
+                        </div> 
+                        <h6 class="text-xl font-semibold text-gray-900">Free Revisions</h6> 
+                        <p class="mt-2 mb-4 text-gray-800"> Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious. </p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="w-full px-4 pt-6 text-center fade-up md:w-4/12"> 
+                <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-2xl"> 
+                    <div class="flex-auto px-4 py-5"> 
+                        <div class="inline-flex items-center justify-center w-12 h-12 p-3 mb-5 text-center text-white bg-green-400 rounded-full shadow-lg"> <i class="fas fa-fingerprint"></i> 
+                        </div> 
+                        <h6 class="text-xl font-semibold text-gray-900">Verified Company</h6> 
+                        <p class="mt-2 mb-4 text-gray-800"> Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged! </p> 
+                    </div> 
+                </div> 
+            </div> 
+        </div>
+    </section>
+
+
+    <!-- my projects section  -->
+    <section id="projects" class= "h-screen space-y-2 text-center bg-gray-100 my-72 "> 
+        <div class="flex-col mx-auto space-x-5 text-gray-900 hero-content lg:even:flex-row lg:odd:flex-row-reverse">
+            <img src="https://picsum.photos/id/755/600/600" class="max-w-sm rounded-lg shadow-2xl"> 
+            <div>
+                <h1 class="mb-5 text-5xl font-bold">
+                    Hello there
+                    </h1> 
+                <p class="mb-5">
+                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    </p> 
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </div>
+        <div class="flex-col mx-auto space-x-5 text-gray-900 hero-content lg:even:flex-row lg:odd:flex-row-reverse">
+            <img src="https://picsum.photos/id/1001/600/600" class="max-w-sm rounded-lg shadow-2xl"> 
+            <div>
+                <h1 class="mb-5 text-5xl font-bold">
+                    Hello there
+                    </h1> 
+                <p class="mb-5">
+                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    </p> 
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact" class="p-10 footer bg-base-200 text-base-content">
+        <div>
+        <span class="footer-title">Services</span> 
+        <a class="link link-hover">Branding</a> 
+        <a class="link link-hover">Design</a> 
+        <a class="link link-hover">Marketing</a> 
+        <a class="link link-hover">Advertisement</a>
+        </div> 
+        <div>
+        <span class="footer-title">Company</span> 
+        <a class="link link-hover">About us</a> 
+        <a class="link link-hover">Contact</a> 
+        <a class="link link-hover">Jobs</a> 
+        <a class="link link-hover">Press kit</a>
+        </div> 
+        <div>
+        <span class="footer-title">Legal</span> 
+        <a class="link link-hover">Terms of use</a> 
+        <a class="link link-hover">Privacy policy</a> 
+        <a class="link link-hover">Cookie policy</a>
+        </div> 
+        <div>
+        <span class="footer-title">Newsletter</span> 
+        <div class="form-control w-80">
+            <label class="label">
+            <span class="label-text">Enter your email address</span>
+            </label> 
+            <div class="relative">
+            <input type="text" placeholder="username@site.com" class="w-full pr-16 input input-bordered"> 
+            <button class="absolute top-0 right-0 rounded-l-none btn btn-primary">Subscribe</button>
+            </div>
+        </div>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        $(document).ready(function(){
+            window.scrollTo(0,window.scrollY);
+            
+        });
+        AOS.refresh();
+    </script>
 </body>
 </html>
