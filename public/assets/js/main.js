@@ -1,3 +1,5 @@
+AOS.init();
+
 $(document).ready(function(){
     document.getElementById("myVideo").playbackRate = 0.9;
     
@@ -5,6 +7,7 @@ $(document).ready(function(){
 
     $(document).on('click', 'a[href^="#"]', function(e) {
         var id = $(this).attr('href');
+        console.log(id);
         var $id = $(id);
         if (id.lenght <= 0) {
         return;
@@ -61,3 +64,4 @@ $(document).ready(function(){
             leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
         }
     }
+

@@ -2,8 +2,10 @@
 @tailwind base;
 @tailwind components;
 
-html {
+html,body {
     @apply antialiased font-body;
+    /* overflow-x: hidden; */
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -35,61 +37,63 @@ html {
     animation-timing-function: ease-in-out;
     overflow: hidden;
     animation-iteration-count: infinite;
-}
-
-
-
-@keyframes switch {
-    0%{
-        @apply text-indigo-600 transform opacity-100 ; 
-        content:'Abderrahmen Brinis' ;
-    }
-    20%{
-        @apply  text-indigo-600 transform opacity-100 ; 
-        content:'Abderrahmen Brinis' ;
-
-    }
-    25%{
-        @apply  text-indigo-600 transform opacity-0 ; 
-        content:'Abderrahmen Brinis';
-    }
-    30%{
-        @apply  text-blue-500 transform opacity-0 ; 
-        content:'Web Developer      ';
-    }
-    35%{
-        @apply  text-blue-500 transform opacity-100 ; 
-        content:'Web Developer      ' ;
-    }
-    55%{
-        @apply  text-blue-500 transform opacity-100 ; 
-        content:'Web Developer      ' ;
-    }
-    60%{
-        @apply  text-blue-500 transform opacity-0 ; 
-        content:'Web Developer      ';
-    }
-    65%{
-        @apply  text-green-500 transform opacity-0 ; 
-        content:'Full Stack Developer';
-    }
-    70%{
-        @apply  text-green-500 transform opacity-100 ; 
-        content:'Full Stack Developer' ;
-    }
-    90%{
-        @apply  text-green-500 transform opacity-100 ; 
-        content:'Full Stack Developer' ;
-    }
-    95%{
-        @apply  text-green-500 transform opacity-0 ; 
-        content:'Full Stack Developer';
-    }
-    100%{
-        @apply  text-indigo-600 transform opacity-0 ; 
-        content:'Abderrahmen Brinis';
+    @keyframes switch {
+        0%{
+            @apply text-indigo-600 transform opacity-100 ; 
+            content:'Abderrahmen Brinis' ;
+        }
+        20%{
+            @apply  text-indigo-600 transform opacity-100 ; 
+            content:'Abderrahmen Brinis' ;
+    
+        }
+        25%{
+            @apply  text-indigo-600 transform opacity-0 ; 
+            content:'Abderrahmen Brinis';
+        }
+        30%{
+            @apply  text-blue-500 transform opacity-0 ; 
+            content:'Web Developer      ';
+        }
+        35%{
+            @apply  text-blue-500 transform opacity-100 ; 
+            content:'Web Developer      ' ;
+        }
+        55%{
+            @apply  text-blue-500 transform opacity-100 ; 
+            content:'Web Developer      ' ;
+        }
+        60%{
+            @apply  text-blue-500 transform opacity-0 ; 
+            content:'Web Developer      ';
+        }
+        65%{
+            @apply  text-green-500 transform opacity-0 ; 
+            content:'Full Stack Developer';
+        }
+        70%{
+            @apply  text-green-500 transform opacity-100 ; 
+            content:'Full Stack Developer' ;
+        }
+        90%{
+            @apply  text-green-500 transform opacity-100 ; 
+            content:'Full Stack Developer' ;
+        }
+        95%{
+            @apply  text-green-500 transform opacity-0 ; 
+            content:'Full Stack Developer';
+        }
+        100%{
+            @apply  text-indigo-600 transform opacity-0 ; 
+            content:'Abderrahmen Brinis';
+        }
     }
 }
+
+
+
+
+
 
 
 

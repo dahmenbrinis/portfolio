@@ -1,7 +1,7 @@
 {
-    "name": "atom-html",
+    "name": "portfolio",
     "version": "1.0.0",
-    "author": "Tailwind Made",
+    "author": "abderrahmen brinis",
     "private": true,
     "scripts": {
         "css": "npx tailwindcss -i public/assets/styles/main.css -o public/assets/styles/main.min.css --watch --jit --purge=\"./public/**/*.html\"",
