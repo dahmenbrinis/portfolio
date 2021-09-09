@@ -1,7 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-    mode:'jit',
+    mode: 'jit',
     purge: {
         content: ["public/**/*.html"],
     },
@@ -13,9 +13,10 @@ module.exports = {
     },
     variants: {
 
-    }   ,
+    },
     plugins: [
         require('daisyui'),
-      ],
+        require('@tailwindcss/aspect-ratio'),
+    ],
 
 };
