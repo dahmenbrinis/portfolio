@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body class="overflow-hidden subpixel-antialiased bg-white" data-theme="corporate" x-data="{isNavOpen:false,scroll:true,moveAvatar:true}">
+<body class="overflow-hidden subpixel-antialiased bg-white " data-theme="corporate" x-data="{isNavOpen:false,scroll:true,moveAvatar:true}">
     <!-- navigation menu -->
     <nav :class="(!scroll)?'bg-gray-50 text-blue-500':' bg-transparent text-gray-100'" class="fixed z-20 w-full transition-all">
         <div class="container px-6 py-4 mx-auto transform-gpu">
@@ -137,20 +137,23 @@
     <section id="Home" class="relative min-h-screen bg-right-top bg-no-repeat bg-cover mb-72">
         <!-- Start Hero Block -->
         <video style="height: 80%" id="myVideo" class="absolute object-cover w-full" src="assets/img/CodingBackground.mp4" muted loop autoplay></video>
-        <div class="absolute w-full h-screen filter blur-lg opacity-30 bg-gradient-to-b from-indigo-600 via-red-400"></div>
+        <div class="absolute w-full h-screen scale-y-150 filter blur-lg opacity-30 bg-gradient-to-b from-indigo-600 via-blue-400"></div>
         <div class="absolute w-full h-full backdrop-filter backdrop-blur-md"></div>
         <div id="main" class="mx-auto opacity-100">
             <div class="pt-56 hero bg-base-200">
                 <div :class="isNavOpen?'pt-80':'pt-48'" class="text-center text-white transition-all hero-content">
                     <div class="max-w-md p-1">
-                        <h1 class="px-2 py-4 overflow-hidden font-mono text-5xl font-bold transition-all rounded-md drop-shadow-2xl hover:ring-2 ring-white ring-1">
-                            Hi. I am
-                            <p class="mt-4 text-xl text-gray-50 dark:text-gray-400 lg:max-w-md">
-                                <span class="text-2xl font-semibold text-blue-500 dark:text-indigo-400 myName"></span>
-                                <br /> ugit corrupti dolorem sequi ex veniam consequuntur id, maiores beatae ipsa omnis aliquam?
-                            </p>
-                        </h1>
-                        <a href="#projects" class="mt-6 text-white hover:bg-gray-600 hover:bg-opacity-40 hover:border-white btn btn-outline">My Projects</a>
+                        <div data-aos="slide-up" data-aos-offset="00" data-aos-mirror="true" data-aos-delay="50" class=" bg-gray-50/25">
+                            <h1 class="px-2 py-4 overflow-hidden text-5xl font-bold transition-all rounded-md drop-shadow-2xl hover:ring-2 ring-white ring-1">
+                                Hi. I am
+                                <p class="mt-4 text-xl text-gray-50 dark:text-gray-400 lg:max-w-md">
+                                    <span class="text-2xl font-semibold text-blue-500 dark:text-indigo-400 myName"></span>
+                                    <br /> ugit corrupti dolorem sequi ex veniam consequuntur id, maiores beatae ipsa omnis aliquam?
+                                </p>
+                            </h1>
+                        </div>
+
+                        <a data-aos="fade" data-aos-offset="00" data-aos-mirror="true" data-aos-delay="500" href="#projects" class="mt-6 text-white hover:bg-gray-100/50 hover:text-gray-700 hover:scale-105 hover:border-white btn btn-outline">My Projects</a>
                     </div>
                 </div>
             </div>
@@ -209,8 +212,8 @@
             </div>
         </div>
     </section>
-
-    <svg class=" fill-current bg-gradient-to-b from-indigo-100 to-indigo-300" id="bigTriangleShadow" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <!-- section separator -->
+    <svg class="fill-current bg-gradient-to-b from-indigo-100 to-indigo-300" id="bigTriangleShadow" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path class="text-white" id="trianglePath1" d="M0 0 L50 100 L100 0 Z" />
             <path
                 class="text-indigo-300 fill-current"
@@ -221,13 +224,14 @@
         </svg>
     <!-- my projects section  -->
     <section id="projects" class="py-24 space-y-8 text-center bg-gradient-to-b from-indigo-300 to-indigo-500">
-        <div style="padding: 0px;" class="flex-col mx-auto space-x-5 text-gray-900 rounded-lg hero-content lg:even:flex-row  lg:odd:flex-row-reverse backdrop-filter -p-4 bg-gradient-to-br from-gray-50/80 to-gray-50/30 backdrop-blur-md">
-            <img data-aos="fade-left" data-aos-offset="100" data-aos-delay="50" src="https://picsum.photos/id/755/600/600" class="mt-4 md:mt-0 max-w-sm rounded-lg shadow-2xl" />
+        <h1 class="px-20 py-10 text-4xl font-bold text-left text-gray-800">Projects</h1>
+        <div style="padding: 0px;" class="flex-col mx-auto space-x-5 rounded-lg text-gray-50 hero-content lg:even:flex-row lg:odd:flex-row-reverse backdrop-filter -p-4 ">
+            <img data-aos="fade-left" data-aos-offset="100" data-aos-delay="50" src="https://picsum.photos/id/755/600/600" class="max-w-sm mt-4 rounded-lg shadow-2xl md:mt-0" />
             <div data-aos="fade-right" data-aos-offset="100" data-aos-delay="400">
                 <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
                 <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                <div class="flex items-center justify-center mx-auto mt-4 md:mt-0 text-gray-50 pb-12">
-                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 text-gray-900 transition-all rounded-md group bg-gray-50 bg-opacity-10 ring-2 ring-gray-600 hover:bg-opacity-80 hover:scale-105">
+                <div class="flex items-center justify-center pb-12 mx-auto mt-4 md:mt-0 text-gray-50">
+                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
                         <div class="font-semibold">Github</div>
                         <svg class="w-8 h-8 fill-current group-hover:text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path
@@ -254,7 +258,7 @@
                               ></path>
                           </svg>
                     </a>
-                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 text-gray-900 transition-all rounded-md group bg-gray-50 bg-opacity-10 ring-2 ring-gray-600 hover:bg-opacity-80 hover:scale-105">
+                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
                         <div class="font-semibold">Preview</div>
                         <svg class="w-8 h-8 group-hover:text-blue-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                               <circle cx="11" cy="11" r="8" />
@@ -264,14 +268,14 @@
                 </div>
             </div>
         </div>
-        <div style="padding: 0px;" class="flex-col mx-auto space-x-5 text-gray-900 rounded-lg hero-content lg:even:flex-row  lg:odd:flex-row-reverse backdrop-filter -p-4 bg-gradient-to-br from-gray-50/80 to-gray-50/30 backdrop-blur-md">
-            <img data-aos="fade-right" data-aos-offset="100" data-aos-delay="50" src="https://picsum.photos/id/755/600/600" class="mt-4 md:mt-0 relative object-cover max-w-sm transform translate-x-4 translate-y-4 rounded-lg shadow-2xl square" />
+        <div style="padding: 0px;" class="flex-col mx-auto space-x-5 rounded-lg text-gray-50 hero-content lg:even:flex-row lg:odd:flex-row-reverse backdrop-filter -p-4 ">
+            <img data-aos="fade-right" data-aos-offset="100" data-aos-delay="50" src="https://picsum.photos/id/755/600/600" class="relative object-cover max-w-sm mt-4 transform translate-x-4 translate-y-4 rounded-lg shadow-2xl md:mt-0 square" />
 
             <div data-aos="fade-left" data-aos-offset="100" data-aos-delay="400" class="">
                 <h1 class="mb-5 text-5xl font-bold">Future Transport</h1>
                 <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                <div class="flex items-center justify-center mx-auto mt-4 md:mt-0 text-gray-50 pb-12">
-                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 text-gray-900 transition-all rounded-md group bg-gray-50 bg-opacity-10 ring-2 ring-gray-600 hover:bg-opacity-80 hover:scale-105">
+                <div class="flex items-center justify-center pb-12 mx-auto mt-4 md:mt-0 text-gray-50">
+                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
                         <div class="font-semibold">Github</div>
                         <svg class="w-8 h-8 fill-current group-hover:text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -298,7 +302,7 @@
                                 ></path>
                             </svg>
                     </a>
-                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 text-gray-900 transition-all rounded-md group bg-gray-50 bg-opacity-10 ring-2 ring-gray-600 hover:bg-opacity-80 hover:scale-105">
+                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
                         <div class="font-semibold">Preview</div>
                         <svg class="w-8 h-8 group-hover:text-blue-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="11" cy="11" r="8" />
@@ -310,8 +314,8 @@
         </div>
     </section>
     <!-- section separator -->
-    <svg class="rotate-180 bg-green-400 drop-shadow-2xl" id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="150" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <path class="fill-current text-indigo-500 bg-gradient-to-b from-indigo-500 to-indigo-600" d="M-5 100 Q 0 20 5 100 Z
+    <svg class="text-blue-400 md:w-full object-cover  w-[1500px] h-32 drop-shadow-xl bg-gradient-to-b from-indigo-500 to-indigo-600" id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path class="bg-red-400 fill-current " d="M-5 100 Q 0 20 5 100 Z
            M0 100 Q 5 0 10 100
            M5 100 Q 10 30 15 100
            M10 100 Q 15 10 20 100
@@ -332,15 +336,15 @@
            M85 100 Q 90 50 95 100
            M90 100 Q 95 25 100 100
            M95 100 Q 100 15 105 100 Z"></path>
-  </svg>
+    </svg>
     <!-- contact us section  -->
-    <section id="contact" class="relative">
-        <img src="assets/img/bubble.png" class="absolute bg-gradient-to-b from-green-400 to-green-100  inset-0 object-cover object-center w-full  "></div>
-        <div class="absolute z-10 inset-0 backdrop-filter backdrop-blur-[1px] object-cover object-center w-full  "></div>
+    <section id="contact" class="relative min-h-screen">
+        <img src="assets/img/bubble.png" class="absolute inset-0 hidden object-cover object-center w-full md:block "></div>
+        <div class="absolute z-10 inset-0 backdrop-filter backdrop-blur-[1px] object-cover object-center w-full  bg-gradient-to-b from-blue-400 to-blue-200"></div>
 
-        <div class=" flex md:w-2/3 mx-auto w-full items-center justify-center h-screen">
-            <div class="z-20 bg-gray-50/90 w-full flex flex-col md:flex-row">
-                <div class="h-32 md:h-auto md:w-5/12">
+        <div class="flex items-center justify-center w-full h-screen mx-auto text-gray-900 md:w-2/3">
+            <div data-aos="fade" data-aos-offset="300" class="z-20 flex flex-col w-full bg-gray-50/90 md:flex-row">
+                <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="200" class="hidden h-32 md:block md:h-auto md:w-5/12">
                     <img class="object-cover w-full h-full " src="assets/img/contact_us.jpg" alt="img">
                 </div>
                 <div class="flex items-center justify-center p-6 sm:p-12 md:w-7/12">
@@ -348,37 +352,37 @@
                         <div class="flex justify-center">
 
                         </div>
-                        <h1 class="mb-4 text-2xl font-bold text-center text-gray-700">
+                        <h1 data-aos="fade-left" data-aos-offset="200" data-aos-delay="0" class="mb-4 text-2xl font-bold text-center text-gray-700">
                             Contact Us Now
                         </h1>
-                        <div>
+                        <div data-aos="fade-left" data-aos-offset="200" data-aos-delay="100">
                             <label class="block text-sm">
-                            name
-                        </label>
+                              name
+                            </label>
                             <input class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder="">
                         </div>
-                        <div>
+                        <div data-aos="fade-left" data-aos-offset="200" data-aos-delay="200">
                             <label class="block text-sm">
-                            Email
-                        </label>
+                              Email
+                            </label>
                             <input class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder="">
                         </div>
-                        <div>
+                        <div data-aos="fade-left" data-aos-offset="100" data-aos-delay="300">
                             <label class="block mt-4 text-sm">
                             Message
-                        </label>
+                            </label>
                             <textarea class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder=""></textarea>
                         </div>
-                        <button class="font-semibold py-3 block w-full px-4  mt-4 text-sm  leading-5 text-center text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+                        <button data-aos="fade-left" data-aos-offset="100" data-aos-delay="400" class="block w-full px-4 py-3 mt-4 text-sm font-semibold leading-5 text-center text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
                             href="#">
                         Submit Mail
                     </button>
                         <hr class="mt-6">
-                        <div class="flex flex-col items-center justify-center gap-2">
+                        <div data-aos="fade-left" data-aos-offset="100" data-aos-delay="600" class="flex flex-col items-center justify-center gap-2">
                             <div class="text-lg text-left">additional information:</div>
-                            <div class="text-gray-500 font-light text-sm">phone: +(213) <span class="">674209174</span></div>
-                            <div class="text-gray-500 font-light text-sm">Address: Algeria , Souk Ahras <span class=""> Zip : 41005</span></div>
-                            <div class="text-gray-500 font-light text-sm">Email: <a href="mailto:abderrahmanebriniss@gmail.com" class="text-blue-400">abderrahmanebriniss@gmail.com</a></div>
+                            <div class="text-sm font-light text-gray-500">phone: +(213) <span class="">674209174</span></div>
+                            <div class="text-sm font-light text-gray-500">Address: Algeria , Souk Ahras <span class=""> Zip : 41005</span></div>
+                            <div class="text-sm font-light text-gray-500">Email: <a href="mailto:abderrahmanebriniss@gmail.com" class="text-blue-400">abderrahmanebriniss@gmail.com</a></div>
                         </div>
                     </div>
                 </div>
