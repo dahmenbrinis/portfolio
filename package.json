@@ -4,7 +4,7 @@
     "author": "abderrahmen brinis",
     "private": true,
     "scripts": {
-        "css": "npx tailwindcss -i public/assets/styles/main.css -o public/assets/styles/main.min.css --watch --jit --purge=\"./public/**/*.html\"",
+        "css": "npx tailwindcss -i public/assets/styles/main.css -o public/assets/styles/main.min.css -c tailwind.config.js --watch --jit ",
         "server": "browser-sync start --config './browser-sync-config.js'",
         "develop": "concurrently 'npm:css -- --watch' 'npm:server-reload'",
         "build": "npm run css -- --env 'production'"
