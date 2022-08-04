@@ -5,10 +5,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio</title>
+    
+    <link rel = "icon" href = 
+"assets/img/pf.png" 
+        type = "image/x-icon">
     <link rel="stylesheet" href="assets/styles/main.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="assets/js/smtp.js"></script>
 </head>
 
 <body class="overflow-hidden subpixel-antialiased bg-white " data-theme="corporate" x-data="{isNavOpen:false,scroll:true,moveAvatar:true}">
@@ -39,9 +44,9 @@
                         <a href="#contact" class="px-2 py-1 mx-2 mt-2 font-bold transition-all duration-200 transform border-b rounded-md rounded-b-none hover:border-none hover:rounded-b-md hover:translate-y-1 hover:shadow-md hover:ring-2 ring-gray-300 text-md md:mt-0">Contact</a>
                     </div>
 
-                    <div class="flex items-center mt-4 md:mt-0">
-                        <a href="#" class="mx-2 transition-all hover:text-indigo-400 hover:scale-125" aria-label="Reddit">
-                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="flex items-center mt-4 md:mt-0 ">
+                        <a href="https://www.linkedin.com/in/abderrahmane-brinis-97a941214/" target="_blank" class="mx-2 transition-all hover:text-indigo-400 hover:scale-125" aria-label="Linkedin">
+                            <!-- <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12
                     2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939
@@ -82,27 +87,15 @@
                     13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477
                     10.67 13C10.67 13.5523 10.2223 14 9.67 14Z"
                                     ></path>
-                                </svg>
+                                </svg> -->
+                                <svg class="w-8 h-8 fill-current"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />  <rect x="2" y="9" width="4" height="12" />  <circle cx="4" cy="4" r="2" /></svg>
+                            </a>
+
+                        <a href="mailto:abderrahmanebriniss@gmail.com" target="_blank" class="mx-2 transition-all hover:text-indigo-400 hover:scale-125" aria-label="Mail">
+                            <svg class="w-8 h-8 "  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />  <polyline points="22,6 12,13 2,6" /></svg>
                         </a>
 
-                        <a href="#" class="mx-2 transition-all hover:text-indigo-400 hover:scale-125" aria-label="Facebook">
-                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439
-                    21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958
-                    10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693
-                    5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101
-                    16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183
-                    8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693
-                    13.563 10.124V12.002H16.334L15.891
-                    14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475
-                    10.9611C21.3929 5.67041 16.7932 1.73997 11.4808
-                    2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z"
-                                    ></path>
-                                </svg>
-                        </a>
-
-                        <a href="#" class="mx-2 transition-all hover:text-indigo-400 hover:scale-125" aria-label="Github">
+                        <a href="https://github.com/dahmenbrinis" target="_blank" class="mx-2 transition-all hover:text-indigo-400 hover:scale-125" aria-label="Github">
                             <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842
@@ -136,7 +129,7 @@
     <!-- welcome section  -->
     <section id="Home" class="relative min-h-screen bg-right-top bg-no-repeat bg-cover mb-72">
         <!-- Start Hero Block -->
-        <video style="height: 80%" id="myVideo" class="absolute object-cover w-full" src="assets/img/CodingBackground.mp4" muted loop autoplay></video>
+        <video style="height: 70%" id="myVideo" class="absolute object-cover w-full" src="assets/img/CodingBackground.mp4" muted loop autoplay></video>
         <div class="absolute w-full h-screen scale-y-150 filter blur-lg opacity-30 bg-gradient-to-b from-indigo-600 via-blue-400"></div>
         <div class="absolute w-full h-full backdrop-filter backdrop-blur-md"></div>
         <div id="main" class="mx-auto opacity-100">
@@ -144,16 +137,16 @@
                 <div :class="isNavOpen?'pt-80':'pt-48'" class="text-center text-white transition-all hero-content">
                     <div class="max-w-md p-1">
                         <div data-aos="slide-up" data-aos-offset="00" data-aos-mirror="true" data-aos-delay="50" class=" bg-gray-50/25">
-                            <h1 class="px-2 py-4 overflow-hidden text-5xl font-bold transition-all rounded-md drop-shadow-2xl hover:ring-2 ring-white ring-1">
+                            <h1  class="px-2 py-4 overflow-hidden text-5xl font-bold transition-all rounded-md drop-shadow-2xl hover:ring-2 ring-white ring-1">
                                 Hi. I am
-                                <p class="mt-4 text-xl text-gray-50 dark:text-gray-400 lg:max-w-md">
+                                <p style="margin:0px 20px ;" class="mt-4 text-xl text-gray-50 dark:text-gray-400 lg:max-w-md">
                                     <span class="text-2xl font-semibold text-blue-500 dark:text-indigo-400 myName"></span>
-                                    <br /> ugit corrupti dolorem sequi ex veniam consequuntur id, maiores beatae ipsa omnis aliquam?
+                                    <br /> Full-Stack Developer <br />(Laravel and Flutter Developer)
                                 </p>
                             </h1>
                         </div>
 
-                        <a data-aos="fade" data-aos-offset="00" data-aos-mirror="true" data-aos-delay="500" href="#projects" class="mt-6 text-white hover:bg-gray-100/50 hover:text-gray-700 hover:scale-105 hover:border-white btn btn-outline">My Projects</a>
+                        <!-- <a data-aos="fade" data-aos-offset="00" data-aos-mirror="true" data-aos-delay="500" href="#projects" class="mt-6 text-white hover:bg-gray-100/50 hover:text-gray-700 hover:scale-105 hover:border-white btn btn-outline">My Projects</a> -->
                     </div>
                 </div>
             </div>
@@ -181,10 +174,12 @@
                 <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-2xl">
                     <div class="flex-auto px-4 py-5">
                         <div class="inline-flex items-center justify-center w-12 h-12 p-3 mb-5 text-center text-white bg-red-400 rounded-full shadow-lg">
-                            <i class="fas fa-award"></i>
+                            <svg class="w-8 h-8 text-red-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
                         </div>
-                        <h6 class="text-xl font-semibold text-gray-900">Awarded Agency</h6>
-                        <p class="mt-2 mb-4 text-gray-800">Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.</p>
+                         <h6 class="text-xl font-semibold text-gray-900">Why consider hiring me</h6>
+                        <p class="mt-2 mb-4 text-gray-800">We build a <b>responsive</b> websites and <b>interactive</b> mobile application.</p>
                     </div>
                 </div>
             </div>
@@ -192,10 +187,16 @@
                 <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-2xl">
                     <div class="flex-auto px-4 py-5">
                         <div class="inline-flex items-center justify-center w-12 h-12 p-3 mb-5 text-center text-white bg-blue-400 rounded-full shadow-lg">
-                            <i class="fas fa-retweet"></i>
+                            <!-- <i class="fas fa-retweet"></i> -->
+                      
+                              <svg class="w-8 h-8 text-red-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                              
                         </div>
-                        <h6 class="text-xl font-semibold text-gray-900">Free Revisions</h6>
-                        <p class="mt-2 mb-4 text-gray-800">Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious.</p>
+                        <h6 class="text-xl font-semibold text-gray-900">About Me</h6>
+                        <p class="mt-2 mb-4 text-gray-800">Full-Stack software Developer from Algeria.</p>
+                        <p class="mt-2 mb-4 text-gray-800">Started working in 2021 for varouis companies.</p>
                     </div>
                 </div>
             </div>
@@ -203,11 +204,15 @@
                 <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-2xl">
                     <div class="flex-auto px-4 py-5">
                         <div class="inline-flex items-center justify-center w-12 h-12 p-3 mb-5 text-center text-white bg-green-400 rounded-full shadow-lg">
-                            <i class="fas fa-fingerprint"></i>
+                            <svg class="w-8 h-8 text-red-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                              </svg>
+                              
                         </div>
-                        <h6 class="text-xl font-semibold text-gray-900">Verified Company</h6>
-                        <p class="mt-2 mb-4 text-gray-800">Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!</p>
-                    </div>
+                         <h6 class="text-xl font-semibold text-gray-900">My Skills</h6>
+                        <p class="mt-2 mb-4 text-gray-800">
+                            Laravel, Flutter, GETX, Tailwind, Vue, Livewire, MVC, BootStrap.</p>
+                    </div> 
                 </div>
             </div>
         </div>
@@ -226,12 +231,12 @@
     <section id="projects" class="py-24 space-y-8 text-center bg-gradient-to-b from-indigo-300 to-indigo-500">
         <h1 class="px-20 py-10 text-4xl font-bold text-left text-gray-800">Projects</h1>
         <div style="padding: 0px;" class="flex-col mx-auto space-x-5 rounded-lg text-gray-50 hero-content lg:even:flex-row lg:odd:flex-row-reverse backdrop-filter -p-4 ">
-            <img data-aos="fade-left" data-aos-offset="100" data-aos-delay="50" src="https://picsum.photos/id/755/600/600" class="max-w-sm mt-4 rounded-lg shadow-2xl md:mt-0" />
+            <img data-aos="fade-left" data-aos-offset="100" data-aos-delay="50" src="assets/img/توصيل-مع-مسافر-1024x891.png" class="max-w-sm mt-4 rounded-lg md:mt-0" />
             <div data-aos="fade-right" data-aos-offset="100" data-aos-delay="400">
-                <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-                <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <h1 class="mb-5 text-5xl font-bold">Twseil</h1>
+                <p class="mb-5">Twseil is a delivery based mobile application that helps users to deliver their products.</p>
                 <div class="flex items-center justify-center pb-12 mx-auto mt-4 md:mt-0 text-gray-50">
-                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
+                    <a href="https://github.com/HOSKADEV/twseil" target="_blank" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
                         <div class="font-semibold">Github</div>
                         <svg class="w-8 h-8 fill-current group-hover:text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path
@@ -258,28 +263,113 @@
                               ></path>
                           </svg>
                     </a>
-                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
-                        <div class="font-semibold">Preview</div>
-                        <svg class="w-8 h-8 group-hover:text-blue-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <circle cx="11" cy="11" r="8" />
-                              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                          </svg>
-                    </a>
+                        <a href="https://drive.google.com/file/d/1hjSbfF5AMJrrbfWNproL04k56RXvf4nG/view" target="_blank" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
+                            <div class="font-semibold">APK</div>
+                            <!-- <svg class="w-8 h-8 group-hover:text-blue-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <circle cx="11" cy="11" r="8" />
+                                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                              </svg> -->
+                              <svg class="w-8 h-8 group-hover:text-blue-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="3" y1="10" x2="3" y2="16" />  <line x1="21" y1="10" x2="21" y2="16" />  <path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0" />  <line x1="8" y1="3" x2="9" y2="5" />  <line x1="16" y1="3" x2="15" y2="5" />  <line x1="9" y1="18" x2="9" y2="21" />  <line x1="15" y1="18" x2="15" y2="21" /></svg>
+                        </a>
+                </div>
+                
                 </div>
             </div>
         </div>
         <div style="padding: 0px;" class="flex-col mx-auto space-x-5 rounded-lg text-gray-50 hero-content lg:even:flex-row lg:odd:flex-row-reverse backdrop-filter -p-4 ">
-            <img data-aos="fade-right" data-aos-offset="100" data-aos-delay="50" src="https://picsum.photos/id/755/600/600" class="relative object-cover max-w-sm mt-4 transform translate-x-4 translate-y-4 rounded-lg shadow-2xl md:mt-0 square" />
+            <img data-aos="fade-right" data-aos-offset="100" data-aos-delay="50" src="assets/img/learnify.png" class="relative object-cover max-w-sm mt-4 transform translate-x-4 translate-y-4 rounded-lg md:mt-0 square" />
 
             <div data-aos="fade-left" data-aos-offset="100" data-aos-delay="400" class="">
-                <h1 class="mb-5 text-5xl font-bold">Future Transport</h1>
-                <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            
+                <h1 class="mb-5 text-5xl font-bold">Learnify</h1>
+                <p class="mb-5">Learnify is online educational platform that allows users to ask and answer questions using the gamification concept.</p>
                 <div class="flex items-center justify-center pb-12 mx-auto mt-4 md:mt-0 text-gray-50">
-                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
-                        <div class="font-semibold">Github</div>
+                    <a href="https://github.com/dahmenbrinis/learnify_client" target="_blank" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
+                        <div class="font-semibold">Frontend</div>
                         <svg class="w-8 h-8 fill-current group-hover:text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842
+                            <path
+                                d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842
+      10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302
+      21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402
+      20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002
+      17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302
+      15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657
+      16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747
+      7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902
+      17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002
+      16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691
+      9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802
+      6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639
+      6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264
+      6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364
+      8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388
+      15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612
+      17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499
+      20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265
+      19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181
+      1.99888 12.026 2Z"
+                            ></path>
+                        </svg>
+                    </a>
+                    <!-- <div class="flex items-center justify-center pb-12 mx-auto mt-4 md:mt-0 text-gray-50"> -->
+                        <a href="https://github.com/dahmenbrinis/learnify_server" target="_blank" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
+                            <div class="font-semibold">Backend</div>
+                            <svg class="w-8 h-8 fill-current group-hover:text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842
+              10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302
+              21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402
+              20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002
+              17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302
+              15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657
+              16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747
+              7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902
+              17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002
+              16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691
+              9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802
+              6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639
+              6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264
+              6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364
+              8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388
+              15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612
+              17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499
+              20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265
+              19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181
+              1.99888 12.026 2Z"
+                                    ></path>
+                                </svg>
+                        </a>
+                    <a href="https://drive.google.com/file/d/1gQOkh2uhuzxlD5xDgkXbn0sJjws_KMS7/view" target="_blank" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
+                        <div class="font-semibold">APK</div>
+                        <svg class="w-8 h-8 group-hover:text-blue-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="3" y1="10" x2="3" y2="16" />  <line x1="21" y1="10" x2="21" y2="16" />  <path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0" />  <line x1="8" y1="3" x2="9" y2="5" />  <line x1="16" y1="3" x2="15" y2="5" />  <line x1="9" y1="18" x2="9" y2="21" />  <line x1="15" y1="18" x2="15" y2="21" /></svg>
+
+                    </a>
+                <!-- </div> -->
+            </div>
+        
+        
+       
+       
+       
+        </div></div>
+        <div style="padding: 0px;" class="flex-col mx-auto space-x-5 rounded-lg text-gray-50 hero-content lg:even:flex-row lg:odd:flex-row-reverse backdrop-filter -p-4 ">
+            <svg style="height: 250px;" class="relative object-cover mt-4 transform translate-x-4 translate-y-4 rounded-lg md:mt-0 square aos-init aos-animate" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50" viewBox="0 0 119.5 119.5" version="1.1">
+                <g id="surface1">
+                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(255, 255, 255);fill-opacity:1;" d="M 77.960938 59.75 C 77.960938 49.691406 69.808594 41.535156 59.75 41.535156 C 49.691406 41.535156 41.535156 49.691406 41.535156 59.75 C 41.535156 69.808594 49.691406 77.960938 59.75 77.960938 C 69.808594 77.960938 77.960938 69.808594 77.960938 59.75 "></path>
+                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(248, 248, 248);fill-opacity:1;" d="M 59.75 -0.00390625 C 54.058594 -0.00390625 48.558594 0.8125 43.34375 2.296875 L 43.34375 34.59375 C 48.0625 31.511719 53.695313 29.714844 59.75 29.714844 C 76.335938 29.714844 89.785156 43.160156 89.785156 59.75 C 89.785156 76.335938 76.335938 89.785156 59.75 89.785156 C 43.160156 89.785156 29.714844 76.335938 29.714844 59.75 C 29.714844 59.214844 29.730469 58.683594 29.757813 58.15625 L 29.714844 58.191406 L 29.714844 8.105469 C 11.949219 18.460938 0 37.703125 0 59.75 C 0 92.746094 26.753906 119.5 59.75 119.5 C 92.75 119.5 119.496094 92.746094 119.496094 59.75 C 119.496094 26.75 92.75 -0.00390625 59.75 -0.00390625 "></path>
+                </g>
+            </svg>
+            <!-- <img data-aos="fade-right" data-aos-offset="100" data-aos-delay="50" src="assets/img/توصيل-مع-مسافر-1024x891.png" class="relative object-cover max-w-sm mt-4 transform translate-x-4 translate-y-4 rounded-lg md:mt-0 square aos-init aos-animate"> -->
+            
+            <div data-aos="fade-left" data-aos-offset="100" data-aos-delay="400" class="aos-init aos-animate">
+            
+                <h1 class="mb-5 text-5xl font-bold">Social Blitz</h1>
+                <p class="mb-5">Social Blitz is a social media web application that helps users to communicate around the globe.</p>
+                <div class="flex items-center justify-center pb-12 mx-auto mt-4 md:mt-0 text-gray-50">
+                    <!--<a href="https://github.com/dahmenbrinis/learnify_client" target="_blank" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
+                       <!-- <div class="font-semibold">Frontend</div>
+                        <svg class="w-8 h-8 fill-current group-hover:text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842
           10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302
           21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402
           20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002
@@ -298,20 +388,59 @@
           17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499
           20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265
           19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181
-          1.99888 12.026 2Z"
-                                ></path>
+          1.99888 12.026 2Z"></path>
                             </svg>
-                    </a>
-                    <a href="#" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
-                        <div class="font-semibold">Preview</div>
-                        <svg class="w-8 h-8 group-hover:text-blue-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8" />
-                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </a>-->
+                     <div class="flex items-center justify-center pb-12 mx-auto mt-4 md:mt-0 text-gray-50"> 
+           
+
+
+
+                        <a href="https://github.com/dahmenbrinis/social-network-app" target="_blank" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
+                            <div class="font-semibold">Github</div>
+                            <svg class="w-8 h-8 fill-current group-hover:text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842
+          10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302
+          21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402
+          20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002
+          17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302
+          15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657
+          16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747
+          7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902
+          17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002
+          16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691
+          9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802
+          6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639
+          6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264
+          6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364
+          8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388
+          15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612
+          17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499
+          20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265
+          19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181
+          1.99888 12.026 2Z"></path>
                             </svg>
+                        </a>
+
+
+
+                    <a href="http://social-yellow.herokuapp.com/" target="_blank" class="flex items-center justify-between p-2 pl-4 mx-2 space-x-2 transition-all rounded-md group bg-gray-50/5 ring-2 ring-gray-50 hover:bg-opacity-80 hover:scale-105">
+                        <div class="font-semibold">Site</div>
+             
+                            <svg class="w-8 h-8 group-hover:text-blue-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="3.6" y1="9" x2="20.4" y2="9" />  <line x1="3.6" y1="15" x2="20.4" y2="15" />  <path d="M11.5 3a17 17 0 0 0 0 18" />  <path d="M12.5 3a17 17 0 0 1 0 18" /></svg>
                     </a>
-                </div>
+                <!-- </div> -->
             </div>
+        
+        
+       
+       
+       
         </div>
+        
+        
+    </div>
+        
     </section>
     <!-- section separator -->
     <svg class="text-blue-400 md:w-full object-cover  w-[1500px] h-32 drop-shadow-xl bg-gradient-to-b from-indigo-500 to-indigo-600" id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -357,30 +486,30 @@
                         </h1>
                         <div data-aos="fade-left" data-aos-offset="200" data-aos-delay="100">
                             <label class="block text-sm">
-                              name
+                              Name
                             </label>
-                            <input class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder="">
+                            <input id="user" class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder="">
                         </div>
                         <div data-aos="fade-left" data-aos-offset="200" data-aos-delay="200">
-                            <label class="block text-sm">
+                            <label  class="block text-sm">
                               Email
                             </label>
-                            <input class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder="">
+                            <input id="title" class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder="">
                         </div>
                         <div data-aos="fade-left" data-aos-offset="100" data-aos-delay="300">
                             <label class="block mt-4 text-sm">
                             Message
                             </label>
-                            <textarea class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder=""></textarea>
+                            <textarea id="body" class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600" placeholder=""></textarea>
                         </div>
                         <button data-aos="fade-left" data-aos-offset="100" data-aos-delay="400" class="block w-full px-4 py-3 mt-4 text-sm font-semibold leading-5 text-center text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
-                            href="#">
+                        onclick="sendEmail()">
                         Submit Mail
                     </button>
                         <hr class="mt-6">
                         <div data-aos="fade-left" data-aos-offset="100" data-aos-delay="600" class="flex flex-col items-center justify-center gap-2">
-                            <div class="text-lg text-left">additional information:</div>
-                            <div class="text-sm font-light text-gray-500">phone: +(213) <span class="">674209174</span></div>
+                            <div class="text-lg text-left">Additional information:</div>
+                            <div class="text-sm font-light text-gray-500">Phone: +(213) <span class="">674209174</span></div>
                             <div class="text-sm font-light text-gray-500">Address: Algeria , Souk Ahras <span class=""> Zip : 41005</span></div>
                             <div class="text-sm font-light text-gray-500">Email: <a href="mailto:abderrahmanebriniss@gmail.com" class="text-blue-400">abderrahmanebriniss@gmail.com</a></div>
                         </div>
@@ -394,6 +523,22 @@
     <script src="assets/js/main.js"></script>
     <script>
         AOS.init();
+        function sendEmail() {
+  var name = document.getElementById('user').value ; 
+  var title = document.getElementById('title').value ; 
+  var body = document.getElementById('body').innerHTML ; 
+	Email.send({
+	Host: "smtp.mailtrap.io:2525",
+	Username : "5e7471ba13ef60",
+	Password : "9c85c9e016acbc",
+	To : 'dahmenhacker12@gmail.com',
+	From : "5e7471ba13ef60",
+	Subject : name+title,
+	Body : body,
+	}).then(
+		message => alert("mail sent successfully")
+	);
+}
     </script>
 </body>
 

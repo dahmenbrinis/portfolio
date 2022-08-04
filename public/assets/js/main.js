@@ -1,8 +1,8 @@
 AOS.init();
-
+// import 'flowbite';
 $(document).ready(function(){
     document.getElementById("myVideo").playbackRate = 0.9;
-    
+
 });
 
     $(document).on('click', 'a[href^="#"]', function(e) {
